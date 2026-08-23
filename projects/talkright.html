@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TalkRight | Jayesh Gour</title>
+<meta name="description" content="TalkRight — an English-correction chatbot built with FastAPI and Google Gemini, including real production debugging of a model deprecation and deployment conflict.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="../index.html" class="nav-logo"><span class="dot"></span>JG</a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html" class="active">Projects</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../contact.html" class="nav-cta mobile-cta">Let's Connect →</a></li>
+    </ul>
+    <a href="../contact.html" class="nav-cta">Let's Connect →</a>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="container">
+    <a href="../projects.html" class="detail-back">← Back to projects</a>
+    <div class="detail-meta-row">
+      <span class="status-pill live">LIVE</span>
+      <span class="badge mono">Generative AI / NLP / Chatbot</span>
+    </div>
+    <h1>TalkRight</h1>
+    <p class="lead">An English-practice chatbot that corrects grammar and phrasing like a close friend would — never like a strict teacher.</p>
+    <div class="btn-row">
+      <a href="https://talkright-ai.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary">Live Demo</a>
+      <a href="https://github.com/jayesh-gour/TalkRight" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub</a>
+    </div>
+
+    <div class="arch-flow reveal in-view">
+      <span class="arch-node">Streamlit UI</span><span class="arch-arrow">→</span>
+      <span class="arch-node">FastAPI /chat</span><span class="arch-arrow">→</span>
+      <span class="arch-node">Prompt layer</span><span class="arch-arrow">→</span>
+      <span class="arch-node">Gemini API</span><span class="arch-arrow">→</span>
+      <span class="arch-node">Correction + reply</span>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container" style="max-width: 820px;">
+
+    <div class="reveal" style="margin-bottom: 50px;">
+      <h2 class="section-title" style="font-size: 24px;">Problem</h2>
+      <p style="color: var(--text-secondary); font-size: 15px;">Practicing English conversation feels risky when every mistake gets flagged in a clinical, judgmental tone — that discourages exactly the people who need the practice most.</p>
+    </div>
+
+    <div class="reveal" style="margin-bottom: 50px;">
+      <h2 class="section-title" style="font-size: 24px;">Solution</h2>
+      <p style="color: var(--text-secondary); font-size: 15px;">TalkRight takes casual, typo-included input, corrects grammar and phrasing, then replies conversationally — tuned through explicit tone rules and few-shot examples in the system prompt so responses never sound robotic or third-person.</p>
+    </div>
+
+    <div class="reveal" style="margin-bottom: 50px;">
+      <h2 class="section-title" style="font-size: 24px;">Key features</h2>
+      <div class="feature-grid">
+        <div class="feature-item"><span class="check">✓</span>Natural-language grammar &amp; phrasing correction</div>
+        <div class="feature-item"><span class="check">✓</span>Warm, casual conversational replies</div>
+        <div class="feature-item"><span class="check">✓</span>Few-shot prompt engineering for consistent tone</div>
+        <div class="feature-item"><span class="check">✓</span>FastAPI backend, Streamlit frontend</div>
+        <div class="feature-item"><span class="check">✓</span>Custom dark indigo/violet UI with correction badges</div>
+        <div class="feature-item"><span class="check">✓</span>Deployed on Render + Streamlit Community Cloud</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-bottom: 50px;">
+      <h2 class="section-title" style="font-size: 24px;">Technology</h2>
+      <div class="tech-badges">
+        <span class="tech-badge">FastAPI</span><span class="tech-badge">Google Gemini API</span><span class="tech-badge">Streamlit</span><span class="tech-badge">Pydantic</span><span class="tech-badge">python-dotenv</span>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-bottom: 50px;">
+      <h2 class="section-title" style="font-size: 24px;">Engineering challenges</h2>
+
+      <div class="challenge-card">
+        <p class="tag problem">Challenge</p>
+        <p>Google deprecated multiple Gemini model versions mid-project (<code>gemini-2.0-flash</code> → <code>gemini-2.5-flash-lite</code>), breaking the app in production each time.</p>
+        <p class="tag solution">Solution</p>
+        <p>Migrated to the <code>gemini-flash-latest</code> alias instead of pinning a specific model version, so future deprecations no longer require a code change.</p>
+      </div>
+
+      <div class="challenge-card">
+        <p class="tag problem">Challenge</p>
+        <p>Render deployment failed with a <code>grpcio-status</code> dependency conflict — <code>requirements.txt</code> accidentally mixed frontend (Streamlit, pandas) and backend dependencies with pinned versions.</p>
+        <p class="tag solution">Solution</p>
+        <p>Split into clean, unpinned, backend-only and frontend-only requirement files, and kept API error responses in the same shape (<code>{"message": ...}</code>) as success responses so the frontend never breaks on failure.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h2 class="section-title" style="font-size: 24px;">What I learned</h2>
+      <p class="learned-box">Real production incidents — a third-party model getting deprecated, a dependency conflict on deploy — taught me more about resilient API design than the initial build did. Aliasing instead of pinning, and keeping response shapes consistent even in failure, are lessons I now apply by default.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo"><span class="dot"></span>JAYESH GOUR</a>
+        <p>AI-focused Software Developer</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Site</h5>
+          <a href="../about.html">About</a>
+          <a href="../projects.html">Projects</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <a href="https://github.com/jayesh-gour" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/jayesh-gour/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:gourjayesh47@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Jayesh Gour. All rights reserved.</span>
+      <span>Built with curiosity, code, and too many debugging sessions.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

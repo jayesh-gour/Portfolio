@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Jayesh Gour</title>
+<meta name="description" content="Get in touch with Jayesh Gour for opportunities, collaborations, or AI/software projects.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><span class="dot"></span>JG</a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html" data-nav="/">Home</a></li>
+      <li><a href="about.html" data-nav="/about.html">About</a></li>
+      <li><a href="projects.html" data-nav="/projects.html">Projects</a></li>
+      <li><a href="contact.html" data-nav="/contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta mobile-cta">Let's Connect →</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Let's Connect →</a>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom: 40px;">
+  <div class="container">
+    <p class="eyebrow reveal in-view">Get in touch</p>
+    <h1 class="reveal in-view" style="font-size: clamp(32px, 4.5vw, 52px);">Let's build something.</h1>
+    <p class="hero-sub reveal in-view">For opportunities, collaborations, internships, software development work, or interesting AI projects.</p>
+  </div>
+</header>
+
+<section class="section" style="border-top: none; padding-top: 20px;">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="reveal-group">
+        <a href="mailto:gourjayesh47@gmail.com" class="contact-method">
+          <div class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2"><path d="M4 4h16v16H4V4Zm0 0 8 9 8-9"/></svg>
+          </div>
+          <div>
+            <div class="label">EMAIL</div>
+            <div class="value">gourjayesh47@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://github.com/jayesh-gour" target="_blank" rel="noopener" class="contact-method">
+          <div class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          </div>
+          <div>
+            <div class="label">GITHUB</div>
+            <div class="value">github.com/jayesh-gour</div>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/jayesh-gour/" target="_blank" rel="noopener" class="contact-method">
+          <div class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2"><path d="M4 4h16v16H4V4Zm4 6v6M8 8v.01M12 16v-3.5a2 2 0 0 1 4 0V16m-4-3.5V10"/></svg>
+          </div>
+          <div>
+            <div class="label">LINKEDIN</div>
+            <div class="value">in/jayesh-gour</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="reveal">
+        <!--
+          To enable real submissions: create a free form at https://formspree.io,
+          then replace YOUR_FORM_ID below with your endpoint id.
+          Until then, the form validates but shows a clear notice instead of
+          pretending to send.
+        -->
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name">
+              <div class="field-error" data-error-for="name"></div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com">
+              <div class="field-error" data-error-for="email"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?">
+            <div class="field-error" data-error-for="subject"></div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me a bit more..."></textarea>
+            <div class="field-error" data-error-for="message"></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <div class="form-status" id="form-status"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><span class="dot"></span>JAYESH GOUR</a>
+        <p>AI-focused Software Developer</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Site</h5>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <a href="https://github.com/jayesh-gour" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/jayesh-gour/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:gourjayesh47@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Jayesh Gour. All rights reserved.</span>
+      <span>Built with curiosity, code, and too many debugging sessions.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Jayesh Gour</title>
+<meta name="description" content="AI-powered applications, backend APIs and data projects built by Jayesh Gour — Momentum AI, TalkRight, AI Job Market EDA and more.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><span class="dot"></span>JG</a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html" data-nav="/">Home</a></li>
+      <li><a href="about.html" data-nav="/about.html">About</a></li>
+      <li><a href="projects.html" data-nav="/projects.html">Projects</a></li>
+      <li><a href="contact.html" data-nav="/contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta mobile-cta">Let's Connect →</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Let's Connect →</a>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom: 40px;">
+  <div class="container">
+    <p class="eyebrow reveal in-view">Selected work</p>
+    <h1 class="reveal in-view" style="font-size: clamp(32px, 4.5vw, 52px); max-width: 780px;">Projects, ordered by <span class="text-gradient">where I'm headed.</span></h1>
+    <p class="hero-sub reveal in-view" style="max-width: 640px;">AI/LLM work first, since that's the direction I'm building toward — followed by the full-stack and data work that got me here.</p>
+  </div>
+</header>
+
+<!-- TIER 1 -->
+<section class="section" style="border-top: none; padding-top: 20px;">
+  <div class="container">
+    <p class="eyebrow">Tier 1</p>
+    <h2 class="section-title reveal">Featured — AI &amp; LLM applications</h2>
+
+    <div class="project-grid reveal-group" style="margin-top: 24px;">
+
+      <div class="project-card">
+        <div class="project-head">
+          <span class="req-line"><span class="req-method">GET</span> /projects/momentum-ai</span>
+          <span class="status-pill live">LIVE</span>
+        </div>
+        <div class="project-body">
+          <p class="project-tier">AI / Full-Stack / Productivity</p>
+          <h3>Momentum AI</h3>
+          <p>An AI accountability coach. Goal-setting onboarding, daily journaling, and Gemini-generated feedback that compares today against yesterday — built on a real relational schema (User, UserProfile, DiaryEntry) with SQLAlchemy relationships, foreign keys and cascade deletes.</p>
+          <div class="tech-badges">
+            <span class="tech-badge">FastAPI</span><span class="tech-badge">SQLAlchemy</span><span class="tech-badge">SQLite</span><span class="tech-badge">Gemini</span><span class="tech-badge">Streamlit</span>
+          </div>
+          <div class="project-links">
+            <a href="projects/momentum-ai.html">View details <span class="arrow">→</span></a>
+            <a href="https://github.com/jayesh-gour/Momentum-AI" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://momentum-ai-jg.streamlit.app/" target="_blank" rel="noopener">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-head">
+          <span class="req-line"><span class="req-method">GET</span> /projects/talkright</span>
+          <span class="status-pill live">LIVE</span>
+        </div>
+        <div class="project-body">
+          <p class="project-tier">Generative AI / NLP / Chatbot</p>
+          <h3>TalkRight</h3>
+          <p>An English correction chatbot that fixes grammar and phrasing in a warm, encouraging tone instead of a strict-teacher one. Demonstrates real LLM API integration, iterative few-shot prompting, and production debugging.</p>
+          <div class="tech-badges">
+            <span class="tech-badge">FastAPI</span><span class="tech-badge">Gemini API</span><span class="tech-badge">Streamlit</span><span class="tech-badge">Prompt Engineering</span>
+          </div>
+          <div class="project-links">
+            <a href="projects/talkright.html">View details <span class="arrow">→</span></a>
+            <a href="https://github.com/jayesh-gour/TalkRight" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://talkright-ai.streamlit.app/" target="_blank" rel="noopener">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TIER 2 -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">Tier 2</p>
+    <h2 class="section-title reveal">Data &amp; analysis</h2>
+
+    <div class="project-grid single-col reveal-group" style="margin-top: 24px;">
+      <div class="project-card" style="max-width: 720px;">
+        <div class="project-head">
+          <span class="req-line"><span class="req-method">GET</span> /projects/ai-job-market-eda</span>
+          <span class="status-pill live">PUBLISHED</span>
+        </div>
+        <div class="project-body">
+          <p class="project-tier">Data Analytics / AI Market Research</p>
+          <h3>AI Job Market — Exploratory Data Analysis</h3>
+          <p>Analysis of 1,500 AI/ML job postings across salary, experience, remote-work type, geography and in-demand skills. Key findings: LLM-specialized roles carry an <strong>8.6% salary premium</strong>; experience level is a stronger salary driver than remote-work type; salary grows roughly <strong>60%</strong> from entry to lead level.</p>
+          <div class="tech-badges">
+            <span class="tech-badge">Python</span><span class="tech-badge">Pandas</span><span class="tech-badge">NumPy</span><span class="tech-badge">Matplotlib</span><span class="tech-badge">Seaborn</span><span class="tech-badge">Plotly</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/jayesh-gour/AI-Job-Market-EDA" target="_blank" rel="noopener">View on GitHub <span class="arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIER 3 -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">Tier 3</p>
+    <h2 class="section-title reveal">Practice projects</h2>
+    <p class="section-sub reveal">Smaller, deliberately scoped builds used to reinforce specific fundamentals.</p>
+
+    <div class="project-grid single-col reveal-group">
+      <div class="project-card" style="max-width: 720px;">
+        <div class="project-head">
+          <span class="req-line"><span class="req-method">GET</span> /projects/fitspark</span>
+          <span class="status-pill practice">PRACTICE PROJECT</span>
+        </div>
+        <div class="project-body">
+          <p class="project-tier">Practice Project</p>
+          <h3>FitSpark</h3>
+          <p>A workout plan generator — pick a time slot (15/30/45 min) and a goal (cardio/strength/flexibility), get a 3-exercise plan with time split evenly. Built to reinforce FastAPI query-parameter validation and REST design (GET vs. POST) after TalkRight.</p>
+          <div class="tech-badges">
+            <span class="tech-badge">FastAPI</span><span class="tech-badge">Streamlit</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/jayesh-gour/FitSpark" target="_blank" rel="noopener">View on GitHub <span class="arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><span class="dot"></span>JAYESH GOUR</a>
+        <p>AI-focused Software Developer</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Site</h5>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <a href="https://github.com/jayesh-gour" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/jayesh-gour/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:gourjayesh47@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Jayesh Gour. All rights reserved.</span>
+      <span>Built with curiosity, code, and too many debugging sessions.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

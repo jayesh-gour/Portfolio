@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gwen &mdash; Local-First Personal AI Assistant | Jayesh Gour</title>
+<meta name="description" content="Gwen &mdash; a personal AI assistant that runs on local models (Ollama), routes requests with Google ADK, uses ChromaDB RAG over personal documents, and stores long-term memory in PostgreSQL.">
+<link rel="canonical" href="https://jayeshgour.vercel.app/projects/gwen.html">
+<meta property="og:title" content="Gwen &mdash; Local-First Personal AI Assistant | Jayesh Gour">
+<meta property="og:description" content="A personal AI assistant running on local Ollama models with Google ADK orchestration, ChromaDB RAG, PostgreSQL memory, and a FastAPI + Streamlit interface.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jayeshgour.vercel.app/projects/gwen.html">
+<meta property="og:image" content="[PLACEHOLDER: https://jayeshgour.vercel.app/images/og-gwen.png — add project screenshot; falls back to profile image below]">
+<meta property="og:image" content="https://jayeshgour.vercel.app/images/jayesh-gour.jpg">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="../index.html" class="nav-logo"><span class="dot"></span>JG</a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html" class="active">Projects</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../contact.html" class="nav-cta mobile-cta">Let's Connect &rarr;</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="../resume/Jayesh_Gour_Resume.pdf" target="_blank" rel="noopener" download class="btn btn-ghost nav-resume" aria-label="Download Jayesh Gour's resume PDF">Download Resume</a>
+      <a href="../contact.html" class="nav-cta">Let's Connect &rarr;</a>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="container">
+    <a href="../projects.html" class="detail-back">&larr; Back to projects</a>
+    <div class="detail-meta-row">
+      <span class="status-pill local">LOCAL-FIRST</span>
+      <span class="badge mono">Generative AI / LLM Orchestration / RAG</span>
+    </div>
+    <h1>Gwen</h1>
+    <p class="lead">A personal AI assistant that runs on local models and routes each request to the right one.</p>
+
+    <div class="btn-row">
+      <!-- [PLACEHOLDER: replace the two placeholders below with your real repo URL and demo video URL] -->
+      <a href="[PLACEHOLDER: repo URL]" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub</a>
+      <button class="btn btn-ghost" disabled aria-label="Demo video coming soon">&#9654; Demo Video (coming soon)</button>
+    </div>
+
+    <div class="arch-flow reveal in-view">
+      <span class="arch-node">Streamlit UI</span><span class="arch-arrow">&rarr;</span>
+      <span class="arch-node">FastAPI</span><span class="arch-arrow">&rarr;</span>
+      <span class="arch-node">Orchestrator / model router</span><span class="arch-arrow">&rarr;</span>
+      <span class="arch-node">Ollama models (Granite 4.2 3B, Qwen3 4B)</span><span class="arch-arrow">&rarr;</span>
+      <span class="arch-node">Tools + ChromaDB RAG + PostgreSQL memory</span><span class="arch-arrow">&rarr;</span>
+      <span class="arch-node">Response</span>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container" style="max-width: 820px;">
+
+    <div class="reveal" style="margin-bottom: 50px;">
+      <h2 class="section-title" style="font-size: 24px;">Problem</h2>
+      <p style="color: var(--text-secondary); font-size: 15px;">
+        [PLACEHOLDER: 2&ndash;3 sentences about why local-first &mdash; e.g. privacy, offline capability, cost of cloud LLMs &mdash; in your own words.]
+      </p>
+    </div>
+
+    <div class="reveal" style="margin-bottom: 50px;">
+      <h2 class="section-title" style="font-size: 24px;">Solution</h2>
+      <p style="color: var(--text-secondary); font-size: 15px;">
+        Built with Google ADK and Ollama. Breaks user requests into structured tasks and runs them in sequence with dependency handling; routes general vs. technical queries to specialized local models (Granite 4.2 3B for general use, Qwen3 4B for technical tasks); long-term memory stored in PostgreSQL via SQLAlchemy; RAG over personal documents with ChromaDB and nomic-embed-text; tools for calculation, weather, and web search; FastAPI backend and Streamlit chat UI.
+      </p>
+    </div>
+
+    <div class="reveal" style="margin-bottom: 50px;">
+      <h2 class="section-title" style="font-size: 24px;">Key features</h2>
+      <div class="feature-grid">
+        <div class="feature-item"><span class="check">&#10003;</span>Runs entirely on local Ollama models &mdash; no cloud API calls for inference</div>
+        <div class="feature-item"><span class="check">&#10003;</span>Orchestrator breaks requests into structured tasks with dependency handling</div>
+        <div class="feature-item"><span class="check">&#10003;</span>Model router &mdash; general vs. technical queries sent to the right model</div>
+        <div class="feature-item"><span class="check">&#10003;</span>RAG over personal documents with ChromaDB and nomic-embed-text</div>
+        <div class="feature-item"><span class="check">&#10003;</span>Long-term memory in PostgreSQL via SQLAlchemy</div>
+        <div class="feature-item"><span class="check">&#10003;</span>Tools: calculation, weather, and web search</div>
+        <div class="feature-item"><span class="check">&#10003;</span>FastAPI backend with clean REST interface</div>
+        <div class="feature-item"><span class="check">&#10003;</span>Streamlit chat UI</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-bottom: 50px;">
+      <h2 class="section-title" style="font-size: 24px;">Technology</h2>
+      <div class="tech-badges">
+        <span class="tech-badge">Python</span><span class="tech-badge">Google ADK</span><span class="tech-badge">Ollama</span><span class="tech-badge">FastAPI</span><span class="tech-badge">PostgreSQL</span><span class="tech-badge">SQLAlchemy</span><span class="tech-badge">ChromaDB</span><span class="tech-badge">Streamlit</span><span class="tech-badge">nomic-embed-text</span><span class="tech-badge">Pydantic</span>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-bottom: 50px;">
+      <h2 class="section-title" style="font-size: 24px;">Engineering notes</h2>
+      <div class="challenge-card">
+        <p class="tag solution">Design decision</p>
+        <p>[PLACEHOLDER: one real design decision you made &mdash; e.g. why you chose Google ADK over LangChain, how you structured the task graph, how you handled model fallback, etc.]</p>
+      </div>
+      <div class="challenge-card">
+        <p class="tag problem">Challenge faced</p>
+        <p>[PLACEHOLDER: one real challenge you ran into &mdash; e.g. RAG retrieval quality, Ollama latency, dependency injection between tasks, etc.]</p>
+      </div>
+    </div>
+
+    <!-- Evaluation -->
+    <div class="reveal" style="margin-bottom: 50px;">
+      <h2 class="section-title" style="font-size: 24px;">Evaluation</h2>
+      <div class="challenge-card" style="border-color: var(--accent-violet); background: var(--accent-violet-dim);">
+        <p class="tag" style="background: var(--accent-violet); color: #fff;">To be measured</p>
+        <p>[PLACEHOLDER: routing accuracy on N test queries; RAG retrieval hit@k on N questions &mdash; measure and fill in. Do NOT fabricate numbers.]</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo"><span class="dot"></span>JAYESH GOUR</a>
+        <p>Python Backend &amp; LLM Application Developer</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Site</h5>
+          <a href="../about.html">About</a>
+          <a href="../projects.html">Projects</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <a href="https://github.com/jayesh-gour" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/jayesh-gour/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:gourjayesh47@gmail.com">Email</a>
+          <a href="../resume/Jayesh_Gour_Resume.pdf" target="_blank" rel="noopener" download aria-label="Download resume PDF">Resume</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Jayesh Gour. All rights reserved.</span>
+      <span>Built with curiosity, code, and too many debugging sessions.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -238,6 +238,12 @@ h1, h2, h3, h4 {
   border-radius: 2px;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .nav-cta {
   display: inline-flex;
   align-items: center;
@@ -255,6 +261,17 @@ h1, h2, h3, h4 {
   transform: translateY(-1px);
   box-shadow: 0 6px 24px var(--accent-cyan-dim);
 }
+
+/* Resume button in nav — smaller ghost style */
+.nav-resume {
+  padding: 8px 14px;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-secondary) !important;
+  white-space: nowrap;
+}
+.nav-resume:hover { color: var(--text-primary) !important; border-color: var(--accent-cyan); }
 
 .nav-toggle {
   display: none;
@@ -538,7 +555,7 @@ h1, h2, h3, h4 {
 
 .stat-strip {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   background: var(--border);
   border: 1px solid var(--border);
@@ -723,6 +740,7 @@ h1, h2, h3, h4 {
 .status-pill.live { background: rgba(52, 211, 153, 0.12); color: var(--success); }
 .status-pill.progress { background: rgba(251, 191, 36, 0.12); color: var(--warn); }
 .status-pill.practice { background: rgba(148, 163, 184, 0.12); color: var(--text-secondary); }
+.status-pill.local { background: rgba(139, 92, 246, 0.12); color: var(--accent-violet); }
 
 .project-body {
   padding: 24px 22px 22px;
@@ -1314,6 +1332,8 @@ textarea { resize: vertical; min-height: 130px; }
   .nav-links a { font-size: 20px; }
   .nav-toggle { display: flex; }
   .nav-cta { display: none; }
+  .nav-resume { display: none; }
+  .nav-actions { gap: 0; }
   .nav-links .nav-cta.mobile-cta { display: inline-flex; margin-top: 10px; }
 
   .hero { padding: 130px 0 70px; }
